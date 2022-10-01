@@ -1,0 +1,121 @@
+.trivia-item--container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin-top: -1.2rem;
+    padding: 3px 4px 3px 4px;
+    animation: next_question 1s 1 ease-in-out;
+    transition: all ease-in-out 2s;
+}
+.trivia-question{
+    color: rgb(241, 242, 247);
+    margin: 0;
+    min-height: 70px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.trivia-ul{
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.trivia-li{
+    width: 100%;
+}
+.trivia-choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 3em;
+    font-family: 'Karla';
+    background-color:  rgba(255,255,255,0.1);
+    color: rgb(57, 56, 56);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button-next{
+    font-family: 'poppins', sans-serif;
+    border: none;
+    font-size: 19px;
+    width: max-content;
+    height: 2.5em;
+    padding: 3px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    margin: auto 0px 5px auto; 
+    background-color: rgb(28, 152, 190);
+    cursor: pointer;   
+    transition: all ease-in-out 2s;
+}
+.button-finish{
+    background-color: #0aed69 !important;
+    color: #fff !important;
+    padding: 10px;
+}
+
+.button-next-disabled{
+  opacity: 0;
+}
+
+.trivia-choice-disabled{
+    opacity: 0.5; 
+  cursor: not-allowed;
+}
+
+.trivia-choice-correct{
+    opacity: 1 !important;
+    transform: scale(1.03);
+    animation: button-animation .3s 2 ease-in-out;
+    box-shadow:
+    inset 0 0 50px #0aed69,      /* inner white */
+    inset 20px 0 80px #169e4f,   /* inner left magenta short */
+    inset -20px 0 80px #0ff,  /* inner right cyan short */
+    inset 20px 0 300px rgb(41, 190, 18),  /* inner left magenta broad */
+    inset -20px 0 300px rgb(6, 169, 35), /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px rgb(9, 185, 12),        /* outer left magenta */
+    10px 0 80px #0ff; 
+}
+
+.trivia-choice-incorrect{
+    color: #fff;
+    opacity: 1 !important;
+    animation: button-animation .3s 2 ease-in-out;
+    transform: scale(1.03);
+    box-shadow:
+    inset 0 0 50px #931007,      /* inner white */
+    inset 20px 0 80px #960404,   /* inner left magenta short */
+    inset -20px 0 80px rgb(255, 0, 0),  /* inner right cyan short */
+    inset 20px 0 300px rgb(180, 14, 14),  /* inner left magenta broad */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px rgb(237, 5, 5),        /* outer left magenta */
+    10px 0 80px #0ff; 
+}
+
+@keyframes button-animation {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.05);
+    }
+}
+
+@keyframes next_question {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

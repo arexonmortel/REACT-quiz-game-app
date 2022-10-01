@@ -1,0 +1,50 @@
+.game-div{
+    width: 25%;
+    height: 80%;
+    padding: 1rem;
+    background: #a8c0ff;
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+    background: linear-gradient(to right, #3f2b96, #a8c0ff);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .game-div{
+        width: 40%;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .game-div{
+        width: 60%;
+        height: 80%;
+    }
+
+}
+@media only screen and (max-height: 750px){
+    .game-div{
+        width: 80%;
+        height: 90%;
+    }
+
+}
+
+@media only screen and (min-height: 800px){
+    .game-div{
+        width: 80%;
+        height: 70%;
+    }
+
+}
+
+
+@media screen and (min-width: 1000px), 
+       screen and (max-height: 600px) {
+  .game-div{
+    margin-top: -2.7em;
+    height: 100%;
+  }
+  
+}

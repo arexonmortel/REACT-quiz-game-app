@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Karla:wght@400;500;600;700&family=Poppins:wght@700&display=swap');
+.end-screen{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-complete{
+text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.final-score{
+    color:rgba(0,0,0,0.80);
+}
+.retry-button{
+    margin-top:auto;
+    height: 2.5em;
+    width: 70%;
+    border-radius: .4em;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #43f643;
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    color: rgb(28, 27, 34);
+}
+.retry-button:hover{
+    /* background-color: #15a015; */
+    transform: scale(1.01);
+
+}
+
+.retry-button:active {
+    transform: translateY(4px);
+ }
+

@@ -1,0 +1,14 @@
+.stats-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+li{
+    color: #fff;
+}
+
+.score{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
