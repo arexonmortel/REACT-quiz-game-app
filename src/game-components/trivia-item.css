@@ -55,7 +55,7 @@
     background-color: rgb(28, 152, 190);
     cursor: pointer;   
     transition: all ease-in .3s;
-    animation: animate 1.5s ease-in;
+    animation: animate 1s ease-in;
 }
 @keyframes animate {
     from{
