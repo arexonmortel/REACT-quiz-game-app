@@ -54,7 +54,7 @@
     margin: auto 0 5px auto; 
     background-color: rgb(28, 152, 190);
     cursor: pointer;   
-    transition: all ease-in 1s;
+    transition: all ease-in .5s;
     animation: animate 2.5s ease-in;
 }
 @keyframes animate {
