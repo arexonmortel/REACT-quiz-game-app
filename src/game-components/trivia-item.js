@@ -57,7 +57,7 @@ function TriviaItems({question, questionNum, totalQuestionNum, correctAnswer, in
           {possibleChoices}
         </ul>
       </div>
-      <button className= {buttonNext} disabled={!hasPickedAnswer} onClick ={onClickNext}>{buttonText} </button>
+      {hasPickedAnswer && <button className= {buttonNext} disabled={!hasPickedAnswer} onClick ={onClickNext}>{buttonText} </button>}
     </div>
   )
 }
