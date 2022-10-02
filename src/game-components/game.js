@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { nanoid } from 'nanoid'
 
 import './game.css'
 import Stats from './stats'
@@ -39,20 +38,20 @@ function Game() {
   
   // Next Question
   const clickLoadNext = () =>{
+    //Voice Update about the Game (We're gonna remove this functionality)
+   /*  const message = score === 10 ? "You perfect the quiz" : score > 7 ? "You passed the quiz" : "You did not passed the quiz"
+    const voices = window.speechSynthesis.getVoices();
+    const utterance = new SpeechSynthesisUtterance(`quiz complete, your score is ${score}, ${message}`)
+    utterance.pitch = 10
+    utterance.rate = 1
+    utterance.voice = voices[5]
+    speechSynthesis.speak(utterance) */
     if(currentQuestionNum >= triviaData.length)
     {
       setGameState(prevState=>({
         ...prevState,
         isGameOver: true
       }))
-      //Voice Upadte about the Game
-      const message = score === 10 ? "You perfect the quiz" : score > 7 ? "You passed the quiz" : "You did not passed the quiz"
-      const voices = window.speechSynthesis.getVoices();
-      const utterance = new SpeechSynthesisUtterance(`quiz complete, your score is ${score}, ${message}`)
-      utterance.pitch = 10
-      utterance.rate = 1
-      utterance.voice = voices[5]
-      speechSynthesis.speak(utterance)
     } else {
       setGameState(prevState => ({
         ...prevState,
@@ -70,10 +69,7 @@ function Game() {
         ...gameState,
         score: score + 1
       })
-    } else {
-      console.log(wasCorrectAnswer)
-    }
-    
+    }  
   }
 
 

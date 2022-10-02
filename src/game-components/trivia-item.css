@@ -51,10 +51,19 @@
     padding: 3px;
     letter-spacing: 2px;
     border-radius: 5px;
-    margin: auto 0px 5px auto; 
+    margin: auto 0 5px auto; 
     background-color: rgb(28, 152, 190);
     cursor: pointer;   
-    transition: all ease-in-out 2s;
+    transition: all ease-in 1s;
+    animation: animate 2.5s ease-in;
+}
+@keyframes animate {
+    from{
+        margin: auto -7em 5px auto;
+    }    
+    to{
+        margin: auto 0 5px auto;
+    }
 }
 .button-finish{
     background-color: #0aed69 !important;

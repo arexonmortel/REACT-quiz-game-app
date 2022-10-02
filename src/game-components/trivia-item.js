@@ -19,38 +19,27 @@ function TriviaItems({question, questionNum, totalQuestionNum, correctAnswer, in
 
  let buttonNext = 'button-next'
  let finish = questionNum === totalQuestionNum 
+ //button design when finish
  if(finish){
   buttonNext += ' button-finish'
  }
-
-
+ //Displaying possible choices in random
   const possibleChoices = shuffledAnswer.map(choice=>{
     let classname = 'trivia-choices'
+    //Checking if you pick an answer and updating the classname for designing and disabling the buttons
     if(hasPickedAnswer){
       classname += ' trivia-choice-disabled'
-
-      function speak(message){
-      const voiceArray =[5,2,6]
-      const randomVoice = voiceArray[Math.floor(Math.random() * voiceArray.length)]
-      const voices = window.speechSynthesis.getVoices();
-      const utterance = new SpeechSynthesisUtterance(message)
-      utterance.pitch = 10
-      utterance.rate = 1
-      utterance.voice = voices[randomVoice]
-      speechSynthesis.speak(utterance)
-      }
-
       const thisAnswer = choice === selectedAnswer
       const isCorrect = choice === correctAnswer
+
+      //updating button design if the answer is CORRECT or WRONG
       if(thisAnswer && isCorrect){
         classname +=' trivia-choice-correct'
-        speak("correct")
       }
-       else if (thisAnswer && !isCorrect){
-        classname +=' trivia-choice-incorrect'
-        speak(`incorrect, the answer is ${correctAnswer}`)      
+      else if(thisAnswer && !isCorrect){
+        classname +=' trivia-choice-incorrect'    
         }    
-    }  else {
+    }else{
       buttonNext += ' button-next-disabled'
     }
 
